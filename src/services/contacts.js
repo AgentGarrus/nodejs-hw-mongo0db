@@ -55,7 +55,7 @@ export const updateContact = (contactId, payload, userId) => {
     return ContactsCollection.findOneAndUpdate(
         { _id: contactId, userId },
         payload,
-        { new: true }); // чи буде повернуто оновлений документ //
+        { new: true });
 };
 
 export const deleteContact = (contactId, userId) => {
