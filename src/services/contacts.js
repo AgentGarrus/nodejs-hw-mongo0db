@@ -51,11 +51,11 @@ export const createContact = (payload) => {
     return ContactsCollection.create(payload);
 };
 
-export const updateContact = (contactId, payload, userId) => {
+export const updateContact = (contactId, userId, payload) => {
     return ContactsCollection.findOneAndUpdate(
         { _id: contactId, userId },
         payload,
-        { new: true });
+        { new: true }); // чи буде повернуто оновлений документ //
 };
 
 export const deleteContact = (contactId, userId) => {
