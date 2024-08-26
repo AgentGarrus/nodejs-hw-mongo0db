@@ -1,20 +1,16 @@
 import bcrypt from "bcrypt";
 import { randomBytes } from "crypto";
 import jwt from "jsonwebtoken";
-
 import handlebars from 'handlebars';
 import path from 'node:path';
 import fs from 'node:fs/promises';
 import createHttpError from "http-errors";
-
-
 import { UsersCollection } from "../db/models/user.js";
 import { FIFTEEN_MINUTES, TEMPLATES_DIR, THIRTY_DAYS } from "../constants/index.js";
 import { SessionCollection } from "../db/models/session.js";
 import { SMTP } from "../constants/index.js";
 import { env } from "../utils/env.js";
 import { sendEmail } from "../utils/sendMail.js";
-
 
 export const registerUser = async (payload) => {
     const user = await UsersCollection.findOne({
