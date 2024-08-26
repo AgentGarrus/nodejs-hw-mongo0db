@@ -1,4 +1,3 @@
-
 import { model, Schema } from "mongoose";
 
 const sessionSchema = new Schema({
@@ -31,6 +30,3 @@ const sessionSchema = new Schema({
 
 
 export const SessionCollection = model("sessions", sessionSchema);
-
-
-

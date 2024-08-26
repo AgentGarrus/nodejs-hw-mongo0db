@@ -1,6 +1,5 @@
 import express from "express";
 import { Router } from "express";
-
 import { validateBody } from "../middlewares/validateBody.js";
 import {
     loginUserController,
@@ -17,7 +16,6 @@ import {
     resetPasswordSchema,
 } from "../db/validation/auth.js";
 import { ctrlWrapper } from "../utils/ctrlWrapper.js";
-
 
 const router = Router();
 const jsonParser = express.json();
