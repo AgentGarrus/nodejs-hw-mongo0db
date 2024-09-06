@@ -11,10 +11,10 @@
   },
   "servers": [
     {
-      "url": 
+      "url": "http://localhost:3000"
     },
     {
-      "url": 
+      "url": "https://nodejs-hw-mongo0db.onrender.com" 
     }
   ],
   "tags": [
@@ -1060,7 +1060,7 @@
           "photo": {
             "description": "URL to the contacts photo",
             "type": "string",
-            "example": 
+            "example": "https://res.cloudinary.com/dj45to3zp/image/upload/v1724847181/gm4u7mjk3mphs5edwibk.jpg"
           }
         }
       }
